@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Love+Ya+Like+A+Sister&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+html body {
+
+  background-color: #ffffff;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: auto !important;
+  overflow-x: hidden;
+}
+
+button,
+img {
+  cursor: pointer;
+
+}
+
+.love {
+  font-family: "Love Ya Like A Sister", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.bubblegum {
+  font-family: "Bubblegum Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.color {
+  color: #1b63f6;
+}
+
+.box-gradient {
+  background: linear-gradient(145deg, #6f9cff 20%, #c195fa 80%);
+
+}
+
+
+
+/* navbar */
+/* navbar */
+
+/* about tech */
+.about-container {
+  margin-top: 150px;
+}
+
+.section-label {
+  
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.about-title {
+  font-size: 42px;
+  font-weight: 800;
+  font-family: "Bubblegum Sans", sans-serif;
+  line-height: 1.2;
+  
+  margin-bottom: 20px;
+}
+
+.about-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  max-width: 500px;
+}
+
+.main-image-wrapper {
+  position: relative;
+}
+
+.about-image {
+  width: 100%;
+  border-radius: 16px;
+  filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.15));
+  transition: 0.4s ease;
+}
+
+.about-image:hover {
+  transform: scale(1.04);
+}
+
+.exp-box {
+  position: absolute;
+  top: 15px;
+  left: -25px;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 28px;
+  border: 4px dotted #1b63f6;
+  z-index: 10;
+}
+
+.exp-box h1 {
+
+  font-size: 52px;
+  font-family: "Bubblegum Sans", sans-serif;
+  margin: 0;
+}
+
+.exp-box div {
+  font-weight: 600;
+  color: #333;
+}
+
+
+.side-image {
+  width: 220px;
+  position: absolute;
+  bottom: -90px;
+  right: -60px;
+  border-radius: 16px;
+  filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.15));
+}
+
+.about-bg {
+  background-image: url("https://tynx.in/wp-content/uploads/2024/04/kindergarten-kids-playing-wooden-alphabets-letters-vocabulary-ga.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  padding: 100px 0;
+  /* opacity: 0.7; */
+  transition: all 0.4s ease-in-out;
+}
+
+
+.about-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.55));
+  z-index: 1;
+}
+
+
+.about-bg>* {
+  position: relative;
+  z-index: 2;
+}
+
+
+.image-stack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 40px;
+}
+
+
+.img-stack-item {
+  width: 45%;
+  height: 470px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.25);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+
+.img-stack-item:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0px 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+.side-image2 {
+  width: 220px;
+  position: absolute;
+  top: -25px;
+  left: -65px;
+  border-radius: 16px;
+  filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.15));
+}
+
+.section-label-2 {
+  margin-bottom: 8px;
+}
+
+
+.about-title-2 {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.about-description-2 {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ffffff;
+  max-width: 500px;
+}
+
+/* ourclasses */
+.classes-head {
+  color: #8921f0;
+
+}
+
+.classes-title {
+  color: #8921f0;
+  font-weight: 800;
+
+}
+
+.classes-box {
+  border: 1px dotted #8921f0;
+  
+  /* background: linear-gradient(-145deg, #b8c9ff 20%, #a66df0 80%); */
+  
+}
+
+.classes-box-title {
+  font-size: 38px;
+  /* color: white; */
+}
+
+.hover-scale {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.hover-scale:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+
+/* join us */
+.bg-section {
+  background-image: url("https://tynx.in/wp-content/uploads/2024/04/mainbanner5-1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+  padding: 120px 0;
+  /* opacity: 0.7; */
+  transition: all 0.4s ease-in-out;
+  color: white;
+  z-index: 1;
+}
+
+/* Dark overlay */
+.bg-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  /* dark overlay */
+  /* border-radius: 20px; */
+  z-index: -1;
+}
+
+/* core values */
+.core-bg {
+  background-image: url("https://tynx.in/wp-content/uploads/2024/04/BG4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+  padding: 40px 0;
+  /* opacity: 0.7; */
+  transition: all 0.4s ease-in-out;
+  color: white;
+  z-index: 1;
+}
+
+/* Dark overlay */
+.core-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+/* -------------- 3D CARD WRAPPER -------------- */
+.core-box {
+  height: 280px;
+  width: 280px;
+  border-radius: 50%;
+  perspective: 1200px;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* -------------- FLIPPING CIRCLE -------------- */
+.core-con {
+  position: relative;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+  transition: transform 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.25),
+    inset 0 10px 25px rgba(255, 255, 255, 0.15),
+    inset 0 -10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* HOVER → FLIP */
+.core-box:hover .core-con {
+  transform: rotateY(180deg);
+}
+
+/* -------------- FRONT & BACK STYLES -------------- */
+.core-con .front,
+.core-con .back {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  backface-visibility: hidden; 
+}
+
+.core-con .back{
+  font-family: "Roboto", sans-serif;
+}
+
+/* BACK rotates */
+.core-con .back {
+  transform: rotateY(180deg);
+}
+
+
+.core-con p{
+  font-size: 35px;
+  font-family: "Bubblegum Sans" , sans-serif;
+}
+
+
+/* ===============================
+      RESPONSIVE DESIGN
+   =============================== */
+@media (max-width: 992px) {
+  .img-stack-item {
+    width: 95%;
+    height: 330px;
+  }
+
+  .side-image {
+    width: 180px;
+    bottom: -80px;
+    right: -60px;
+
+  }
+
+  .exp-box {
+
+    top: 15px;
+    left: -25px;
+    padding: 8px 16px;
+    border: 4px dotted #8921f0;
+    z-index: 10;
+  }
+
+  .exp-box h1 {
+
+    font-size: 42px;
+    font-family: "Bubblegum Sans", sans-serif;
+
+  }
+
+  .exp-box div {
+    font-weight: 600;
+    color: #333;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-stack {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .img-stack-item {
+    width: 100%;
+    height: 260px;
+  }
+
+  .side-image {
+    width: 150px;
+    bottom: -60px;
+    right: -50px;
+
+  }
+}
+
+@media (max-width: 480px) {
+  .img-stack-item {
+    width: 100%;
+    height: 220px;
+    border-radius: 18px;
+  }
+
+  .side-image {
+    width: 130px;
+    bottom: -60px;
+    right: -20px;
+
+  }
+}
