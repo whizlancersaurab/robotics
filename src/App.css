@@ -359,6 +359,135 @@ img {
   font-family: "Bubblegum Sans" , sans-serif;
 }
 
+/* home apart */
+/* =============================
+   SECTION WRAPPER
+============================= */
+.homeapart-section {
+  background: #ffffff;
+}
+
+/* =============================
+   TITLES & TEXT
+============================= */
+.apart-subtitle {
+ 
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.apart-title {
+  font-size: 40px;
+  font-weight: 800;
+  
+  line-height: 1.3;
+  margin: 12px 0 18px;
+}
+
+.apart-desc {
+  font-size: 16px;
+  color: #5e5e5e;
+  margin-bottom: 30px;
+  max-width: 90%;
+}
+
+/* =============================
+   FEATURE LIST
+============================= */
+.features-list {
+  margin-top: 25px;
+}
+
+.apart-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 22px;
+  transition: transform 0.25s ease;
+}
+
+.apart-item:hover {
+  transform: translateX(5px);
+}
+
+.apart-item .icon {
+  font-size: 30px;
+  
+  flex-shrink: 0;
+}
+
+.apart-item h5 {
+  font-size: 18px;
+  margin-bottom: 3px;
+  font-weight: 700;
+}
+
+.apart-item p {
+  margin: 0;
+  font-size: 15px;
+  color: #666;
+}
+
+/* =============================
+   IMAGE 
+============================= */
+.apart-image {
+  /* max-height: 450px; */
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* =============================
+   ANIMATIONS (Subtle Industry-Level)
+============================= */
+.fade-in-left {
+  animation: fadeLeft 0.8s ease forwards;
+  opacity: 0;
+}
+
+.fade-in-right {
+  animation: fadeRight 0.8s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* =============================
+   RESPONSIVE TWEAKS
+============================= */
+@media (max-width: 768px) {
+  .apart-title {
+    font-size: 32px;
+  }
+  .apart-desc {
+    max-width: 100%;
+  }
+}
+
+
 
 /* ===============================
       RESPONSIVE DESIGN
