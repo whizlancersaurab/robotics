@@ -1,17 +1,19 @@
 import React from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar'
 import './App.css'
 import Home from './components/Home'
-import SmoothScroll from './components/SmoothScroll'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
-    <div >
-        {/* <SmoothScroll/> */}
-      <Navbar/>
-       <Home/>
-     
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   )
 }
 

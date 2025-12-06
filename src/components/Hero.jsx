@@ -2,15 +2,17 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaRobot, FaBrain, FaChartLine } from "react-icons/fa";
 import { IoIosPeople } from "react-icons/io";
-import bg5 from '../assets/Images/robobg5.jpg'
-import bg2 from '../assets/Images/robobg2.jpg'
-import bg3 from '../assets/Images/robobg3.jpg'
+import bg1 from '../assets/Images/robobg6.webp'
+import bg2 from '../assets/Images/robobg7.webp'
+import bg3 from '../assets/Images/robobg8.jpg'
+import bg4 from '../assets/Images/robobg9.jpg'
 
 const Hero = () => {
     const images = [
-        bg5,
+        bg1,
         bg2,
-        bg3
+        bg3,
+        bg4,
     ];
 
     const [index, setIndex] = useState(0);
@@ -34,7 +36,7 @@ const Hero = () => {
                     transition={{ duration: 2.5 }}
                     style={{
                         backgroundImage: `url(${images[index]})`,
-                        backgroundSize: "cover",
+                        backgroundSize:'cover',
                         backgroundPosition: "center",
                         position: "absolute",
                         inset: 0,

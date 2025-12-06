@@ -1,3 +1,5 @@
+
+import CountUp from "react-countup";
 import adhyan1 from "../assets/Images/adyantech1.png";
 import adhyan2 from "../assets/Images/adhyantech2.png";
 import adhyan4 from "../assets/Images/adhyantech4.png";
@@ -14,7 +16,7 @@ const AboutTech = () => {
 
                     {/* LEFT TEXT */}
                     <div className="col-md-6">
-                        <p className="section-label color love">About Adhyan Tech</p>
+                        <p className="section-label color love">About BOTIXBO Tech</p>
 
                         <h1 className="about-title color">
                             The right environment for growing
@@ -33,7 +35,7 @@ const AboutTech = () => {
                             <img src={adhyan1} className="about-image img-fluid" alt="" />
 
                             <div className="exp-box text-center">
-                                <h1 className="color">25+</h1>
+                                <h1 className="color"> <CountUp start={0} end={25} duration={2.5} />+</h1>
                                 <div className="love">Years of experience</div>
                             </div>
 
@@ -47,6 +49,7 @@ const AboutTech = () => {
 
             {/* ---------- SECTION 2 ---------- */}
             <div className="about-bg mt-5">
+                <div className="about-overlay"></div>
                 <div className="container py-5">
                     <div className="row  align-items-center flex-column-reverse flex-lg-row gy-4">
 
@@ -58,10 +61,10 @@ const AboutTech = () => {
                         </div>
 
                         {/* RIGHT TEXT */}
-                        <div className="col-12 col-md-6">
-                            <p className="section-label-2 text-warning love fs-4">Our Value</p>
+                        <div className="col-12 col-md-6 ">
+                            <p className="section-label-2 color love fs-4">Our Value</p>
 
-                            <h1 className="about-title-2 bubblegum">
+                            <h1 className="about-title-2 color bubblegum">
                                 Safe and Better Future for Our Kids, with Better Learning
                             </h1>
 
@@ -77,6 +80,7 @@ const AboutTech = () => {
             </div>
             {/* ---------- SECTION 2 ---------- */}
             <div className="my-5 py-4">
+
                 <div className="text-center mb-5">
                     <div className="fs-4  color love">Our Classes</div>
                     <div className="fw-bold fs-1  color bubblegum">Study Robotics <br /> Together</div>

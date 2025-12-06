@@ -29,10 +29,12 @@ const HomeApart = () => {
   return (
     <section className="homeapart-section py-5">
       <div className="container">
-        <div className="row align-items-center">
+        <div className="row d-flex align-items-center justify-content-center">
 
           {/* LEFT CONTENT */}
-          <div className="col-md-6 mb-4 mb-md-0 fade-in-left">
+          <div className="col-md-6 mb-4 mb-md-0 fade-in-left 
+            text-center text-md-start 
+            d-flex flex-column align-items-center align-items-md-start">
 
             <h6 className="apart-subtitle color love">What Sets Us Apart</h6>
 
@@ -51,7 +53,7 @@ const HomeApart = () => {
                 <div className="apart-item" key={index}>
                   <span className="icon">{item.icon}</span>
                   <div>
-                    <h5>{item.title}</h5>
+                    <h5 className="bubblegum fs-4">{item.title}</h5>
                     <p>{item.desc}</p>
                   </div>
                 </div>
@@ -59,6 +61,7 @@ const HomeApart = () => {
             </div>
 
           </div>
+
 
           {/* RIGHT IMAGE */}
           <div className="col-md-6 text-center fade-in-right">

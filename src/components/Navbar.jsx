@@ -13,6 +13,8 @@ const Navbar = () => {
                         <img src={logo} width={140} alt="Logo" />
                     </div>
 
+                    
+
                     {/* Middle Section With 45° Divider */}
                     <div className="d-flex align-items-center gap-4 position-relative">
 
