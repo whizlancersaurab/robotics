@@ -45,9 +45,10 @@ const HomeGallery = () => {
       </div>
 
       {/* BOTTOM BOX */}
-      <div className="container mt-5">
+      <div className="container mt-5 ">
         
         <div className="bottom-box">
+          <div className="gal-overlay"></div>
           <h3 className="bottom-msg bubblegum color">See Our BOTIXBO Photo Gallery!</h3>
           <button className="btn btn-primary rounded-pill px-4">View Gallery</button>
         </div>

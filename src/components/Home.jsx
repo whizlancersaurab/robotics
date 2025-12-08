@@ -8,13 +8,15 @@ import Faq from './Faq'
 import HomeContact from './HomeContact'
 import HomeGallery from './HomeGallery'
 import Testimonial from './Testimonial'
+import Explorer from './Explorer'
 
 
 const Home = () => {
   return (
-    <div className='mb-5'>
+    <div>
       <Hero />
       <AboutTech />
+      <Explorer/>
       <JoinUs />
       <CoreValue />
       <HomeApart />

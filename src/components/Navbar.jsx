@@ -1,4 +1,5 @@
 
+import { NavLink } from "react-router-dom";
 import logo from "../assets/Images/logo2.png";
 
 const Navbar = () => {
@@ -13,7 +14,7 @@ const Navbar = () => {
                         <img src={logo} width={140} alt="Logo" />
                     </div>
 
-                    
+
 
                     {/* Middle Section With 45° Divider */}
                     <div className="d-flex align-items-center gap-4 position-relative">
@@ -64,7 +65,7 @@ const Navbar = () => {
             {/* Navigation Bar */}
             <nav className="navbar border-bottom navbar-expand-lg py-3 shadow-top">
                 <div className="container">
-                    <a className="fw-bold btn btn-primary  p-2"  href="#">
+                    <a className="fw-bold btn btn-primary  p-2" href="#">
                         Book a Visit
                     </a>
 
@@ -81,43 +82,62 @@ const Navbar = () => {
                         <ul className="navbar-nav ms-auto gap-lg-3 fw-bold">
 
                             <li className="nav-item">
-                                <a className="nav-link active" href="#">
+                                <NavLink
+                                    className="nav-link"
+                                    to="/"
+                                >
                                     Home
-                                </a>
+                                </NavLink>
                             </li>
 
                             <li className="nav-item">
-                                <a className="nav-link" href="#">
+                                <NavLink
+                                    className="nav-link"
+                                    to="/pricing"
+                                >
                                     Pricing Plan
-                                </a>
+                                </NavLink>
                             </li>
 
                             <li className="nav-item">
-                                <a className="nav-link" href="#">
+                                <NavLink
+                                    className="nav-link"
+                                    to="/faq"
+                                >
                                     FAQ
-                                </a>
+                                </NavLink>
                             </li>
 
                             <li className="nav-item">
-                                <a className="nav-link" href="#">
+                                <NavLink
+                                    className="nav-link"
+                                    to="/blog"
+                                >
                                     Blog
-                                </a>
+                                </NavLink>
                             </li>
 
                             <li className="nav-item">
-                                <a className="nav-link" href="#">
+                                <NavLink
+                                    className="nav-link"
+                                    to="/about"
+                                >
                                     About Us
-                                </a>
+                                </NavLink>
                             </li>
 
                             <li className="nav-item">
-                                <a className="nav-link" href="#">
+                                <NavLink
+                                    className="nav-link"
+                                    to="/contact"
+                                >
                                     Contact Us
-                                </a>
+                                </NavLink>
                             </li>
 
                         </ul>
                     </div>
+
                 </div>
             </nav>
         </>

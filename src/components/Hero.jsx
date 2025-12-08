@@ -51,15 +51,8 @@ const Hero = () => {
                 style={{ position: "relative", zIndex: 2, color: "white" }}
             >
                 <h1
-                    className="fs-1 fw-bold"
-                    style={{
-                        fontFamily: '"Bubblegum Sans", sans-serif',
-                        fontWeight: 800,
-                        fontStyle: "normal",
-                        maxWidth: "400px",
-                        lineHeight: "1.2",
-                        textShadow: "0px 4px 25px rgba(0,0,0,0.5)",
-                    }}
+                    className="fw-bold hero-title bubblegum"
+                   
                 >
                     We are Shaping Today’s Curious Minds
                 </h1>
@@ -90,7 +83,7 @@ const Hero = () => {
                 className="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-1"
                 style={{
                     position: "relative",
-                    marginTop: "-120px",
+                    marginTop: "-80px",
                     zIndex: 3,
                 }}
             >
@@ -131,8 +124,8 @@ const Hero = () => {
                         }}
                         className="bubblegum"
                     >
-                        <div style={{ marginBottom: "12px", color: 'white' }}>{box.icon}</div>
-                        <h4 style={{ fontWeight: "700" , color:'white' }}>{box.title}</h4>
+                        <div style={{ marginBottom: "12px"}} className="text-primary">{box.icon}</div>
+                        <h4 className="color" style={{ fontWeight: "700"}}>{box.title}</h4>
                         <p className="roboto" style={{ fontSize: "0.95rem", marginTop: "10px" }}>{box.text}</p>
                     </motion.div>
                 ))}

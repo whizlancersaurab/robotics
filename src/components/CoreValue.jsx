@@ -15,7 +15,7 @@ const CoreValue = () => {
                         <button className='btn btn-primary mt-5 '>Discover More</button>
                     </div>
                 </div>
-                <div className='row g-4 d-flex align-items-center justify-content-center'>
+                <div className='row g-4 d-flex align-items-center justify-content-center mt-3 mt-sm-0'>
 
                     <div className='col col-md-6 col-lg-3 d-flex justify-content-center'>
                         <div style={{ border: '4px dotted #0e6a8f' }} className='core-box'>
