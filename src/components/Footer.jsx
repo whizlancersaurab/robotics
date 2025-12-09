@@ -1,19 +1,97 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from '../assets/Images/logo2.png'
+import { Link } from "react-router-dom";
+import { toast } from 'react-toastify'
+import { SubscribeCompany } from "../services/api";
 
 
 const Footer = () => {
+
+  const [userData, setUserData] = useState({
+    name: "",
+    email: "",
+  });
+  const [loading ,setLoading] = useState(false)
+
+  const [errors, setErrors] = useState({});
+  const validateForm = () => {
+    let newErrors = {};
+    if (!userData.name.trim()) {
+      newErrors.name = "Name is required.";
+    } else if (userData.name.length < 3) {
+      newErrors.name = "Name must be at least 3 characters.";
+    }
+
+    if (!userData.email.trim()) {
+      newErrors.email = "Email is required.";
+    } else {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(userData.email)) {
+        newErrors.email = "Enter a valid email.";
+      }
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUserData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+    setErrors((prev) => ({
+      ...prev,
+      [name]: "",
+    }));
+  };
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true)
+    if (!validateForm()) {
+      toast.error("Please fix form errors!");
+      return;
+    }
+
+    try {
+      const { data } = await SubscribeCompany(userData);
+
+      if (data?.success) {
+        toast.success(data.message || "Subscribed successfully!");
+
+        setUserData({ name: "", email: "" });
+        setErrors({});
+      } else {
+        toast.error(data?.message || "Something went wrong!");
+      }
+
+    } catch (error) {
+      console.log("API Error:", error);
+
+      const errMsg =
+        error?.response?.data?.message ||
+        error?.message ||
+        "Server error! Please try again later.";
+
+      toast.error(errMsg);
+    }finally{
+      setLoading(false)
+    }
+  };
+
+
+
+
   return (
-    <div  className="footer-wrapper">
-
-      {/* FLOATING WHITE BOX */}
+    <div className="footer-wrapper">
       <div className="container footer-box shadow-lg rounded-bottom-5 b border-5 border-top border-dark  p-5">
-        {/* <div className="about-overlay"></div> */}
+        <div style={{ paddingBottom: '150px' }} className="row gy-4">
 
-        <div style={{paddingBottom:'150px'}} className="row gy-4">
-
-          <div className="col-sm-6  col-md-4">
-            <img 
+          <div className="col-sm-4  col-lg-3">
+            <img
               src={logo}
               alt="logo"
               width="130"
@@ -28,15 +106,17 @@ const Footer = () => {
               <a href="#" className="social-icon wa"><i className="bi bi-whatsapp"></i></a>
             </div>
           </div>
-          <div className="col-sm-6 col-md-2">
+          <div className="col-sm-4 col-lg-3">
             <h5 className="footer-title">Useful Links</h5>
             <ul className="footer-links list-unstyled">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">FAQ</a></li>
+              <li><Link to={'/'}><a >Home</a></Link></li>
+              <li><Link to={'/about'}><a >About Us</a></Link></li>
+              <li><Link to={'/faq'}><a >FAQ</a></Link></li>
+              <li><Link to={'/pricing'}><a >Pricing Plan</a></Link></li>
+
             </ul>
           </div>
-          <div className="col-sm-6 col-md-3">
+          <div className="col-sm-4 col-lg-3">
             <h5 className="footer-title">Contact Us</h5>
             <p className="footer-text">
               H.No 576(O), B Colony, Behind Trimurti Honda, Gorakhpur
@@ -44,21 +124,38 @@ const Footer = () => {
             <p className="footer-text mb-1">Mon - Sat: 09:00 AM - 06:00 PM</p>
             <p className="fw-bold fs-6 color">+91 9519913555</p>
           </div>
-          <div className="col-sm-6  col-md-3">
+          <div className="col-sm-12  col-lg-3">
             <h5 className="footer-title">Subscribe Newsletter</h5>
-            <input 
-              type="text" 
-              placeholder="Your Name"
-              className="form-control rounded-pill footer-input mb-3"
-            />
+            <form onSubmit={handleSubmit}>
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                className="form-control rounded-pill footer-input mb-1"
+                onChange={handleChange}
+                value={userData.name}
+                autoComplete="off"
+              />
+              {errors.name && <small className="text-danger ms-2">{errors.name}</small>}
 
-            <input 
-              type="email" 
-              placeholder="Your Email"
-              className="form-control rounded-pill footer-input mb-3"
-            />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                className="form-control rounded-pill footer-input mb-1"
+                onChange={handleChange}
+                value={userData.email}
+                autoComplete="off"
+              />
+              {errors.email && <small className="text-danger ms-2">{errors.email}</small>}
 
-            <button className="btn submit-btn btn-primary rounded-pill w-50">Submit</button>
+              <div className="text-center text-lg-start mt-2">
+                <button className="btn submit-btn btn-primary rounded-pill w-50">
+                  {loading?'submitting....':'Submit'}
+                </button>
+              </div>
+            </form>
+
           </div>
 
         </div>

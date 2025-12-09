@@ -56,7 +56,7 @@ const HomeContact = () => {
           {/* Right Content */}
           <div className="col-md-6 text-white pe-5">
             <h5 className="text-warning fw-bold love">Enroll Now</h5>
-            <h1 className="display-5 bubblegum mt-3 fw-bold">
+            <h1 className="display-4 bubblegum mt-3 fw-bold">
               Join Our Fun Class <br /> with other Classmate
             </h1>
           </div>

@@ -24,7 +24,7 @@ const Contatact = () => {
                 </div>
             </div>
             <div className='container my-5'>
-                <div className='bubblegum color fs-1'>Keep In Touch</div>
+                <div className='bubblegum color display-5 fw-bold text-center text-sm-start mb-2'>Keep In Touch</div>
                 <div className='row'>
                     <div className='bg-primary col col-sm-3' style={{ height: '1px' }}></div>
                     <div className='bg-success col col-sm-3' style={{ height: '1px' }}></div>

@@ -6,6 +6,7 @@ import bg1 from '../assets/Images/robobg6.webp'
 import bg2 from '../assets/Images/robobg7.webp'
 import bg3 from '../assets/Images/robobg8.jpg'
 import bg4 from '../assets/Images/robobg9.jpg'
+import { Link } from "react-router-dom";
 
 const Hero = () => {
     const images = [
@@ -25,7 +26,7 @@ const Hero = () => {
     }, []);
 
     return (
-        <div style={{ position: "relative", width: "100%", height: '80vh' }}>
+        <div className="hero" style={{ position: "relative", width: "100%", height: '80vh' }}>
 
             <AnimatePresence>
                 <motion.div
@@ -70,12 +71,13 @@ const Hero = () => {
                     teamwork & problem solving.
                 </p>
 
-                <button
+                <Link
+                   to={'/registration'}
                     style={{ maxWidth: '160px' }}
                     className="btn btn-primary py-2 d-flex align-items-center justify-content-center gap-1"
                 >
                     Enroll Now <IoIosPeople size={20} />
-                </button>
+                </Link>
             </div>
 
             {/* BOTTOM CARDS */}

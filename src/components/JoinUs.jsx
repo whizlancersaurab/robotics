@@ -4,7 +4,7 @@ const JoinUs = () => {
     return (
         <div className="bg-section ">
             <div className='join-overlay'></div>
-            <div  className='text-center container'>
+            <div data-aos="zoom-in" className='text-center container'>
                 <div className='love text-warning fs-5 '>Join Us Now</div>
                 <div className='fs-1 bubblegum fw-bold '>Don’t Let Your Child’s Summer Vacation Pass,<br /> Join Our Robotics Workshop.</div>
                 <div className='mt-5 d-flex align-items-center justify-content-center gap-2'>

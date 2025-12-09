@@ -1,5 +1,5 @@
 
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/Images/logo2.png";
 
 const Navbar = () => {
@@ -10,7 +10,7 @@ const Navbar = () => {
                 <div className="d-flex flex-column flex-md-row align-items-center justify-content-between py-2 mx-5">
 
                     {/* Logo */}
-                    <div className="text-center text-md-start mb-3 mb-md-0">
+                    <div  data-aos="slide-right" className="text-center text-md-start mb-3 mb-md-0">
                         <img src={logo} width={140} alt="Logo" />
                     </div>
 
@@ -21,6 +21,7 @@ const Navbar = () => {
 
                         {/* 45° Line */}
                         <div
+                          
                             className="d-none d-md-block"
                             style={{
                                 width: "2px",
@@ -31,7 +32,7 @@ const Navbar = () => {
                         ></div>
 
                         {/* Find Us */}
-                        <div className="text-center text-md-start d-none d-md-block">
+                        <div data-aos="slide-left" className="text-center text-md-start d-none d-md-block">
                             <h6 className="fw-bold mb-1">📍 Find Us</h6>
                             <p className="mb-0 small text-muted">
                                 No 576(O), B Colony, Behind Trimurti Honda, Gorakhpur
@@ -50,7 +51,7 @@ const Navbar = () => {
                         ></div>
 
                         {/* Working Hours */}
-                        <div className="text-center text-md-start d-none d-md-block">
+                        <div  data-aos="slide-left" className="text-center text-md-start d-none d-md-block">
                             <h6 className="fw-bold mb-1">⏰ Opening Hours</h6>
                             <p className="mb-0 small text-muted">
                                 Mon - Sat: 09:00 AM - 06:00 PM
@@ -63,11 +64,11 @@ const Navbar = () => {
             </div>
 
             {/* Navigation Bar */}
-            <nav className="navbar border-bottom navbar-expand-lg py-3 shadow-top">
+            <nav  data-aos="fade-up" className="navbar border-bottom navbar-expand-lg py-3 shadow-top">
                 <div className="container">
-                    <a className="fw-bold btn btn-primary  p-2" href="#">
+                    <Link className="fw-bold btn btn-primary  p-2" to='/registration'>
                         Book a Visit
-                    </a>
+                    </Link>
 
                     <button
                         className="navbar-toggler"

@@ -6,6 +6,7 @@ import img4 from '../assets/Images/homegal4.jpeg'
 import img5 from '../assets/Images/homegal5.jpeg'
 import img6 from '../assets/Images/homegal6.jpeg'
 import img7 from '../assets/Images/homegal7.jpeg'
+import { Link } from "react-router-dom";
 
 
 const images = [
@@ -50,7 +51,7 @@ const HomeGallery = () => {
         <div className="bottom-box">
           <div className="gal-overlay"></div>
           <h3 className="bottom-msg bubblegum color">See Our BOTIXBO Photo Gallery!</h3>
-          <button className="btn btn-primary rounded-pill px-4">View Gallery</button>
+          <Link to={'/gallery'} className="btn button btn-primary rounded-pill px-4">View Gallery</Link>
         </div>
       </div>
 
