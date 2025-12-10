@@ -46,7 +46,7 @@ const HomeGallery = () => {
       </div>
 
       {/* BOTTOM BOX */}
-      <div className="container mt-5 ">
+      <div data-aos='slide-left' className="container mt-5 ">
         
         <div className="bottom-box">
           <div className="gal-overlay"></div>

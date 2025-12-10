@@ -11,14 +11,14 @@ const Faq = () => {
                     <h2 className="section-title bubblegum color">
                         Popular Questions
                     </h2>
-                    <p className="section-desc love fw-semibold">
+                    <p className="section-desc roboto fw-semibold">
                         Find answers to the most frequently asked questions.
                         If you still need help, feel free to contact us anytime.
                     </p>
                 </div>
 
                 {/* FAQ Content */}
-                <div className="row g-4 justify-content-center roboto">
+                <div data-aos='slide-up' className="row g-4 justify-content-center roboto">
 
                     {/* Left Column */}
                     <div className="col-md-6">

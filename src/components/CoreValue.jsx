@@ -6,7 +6,7 @@ const CoreValue = () => {
             <div className='core-overlay'></div>
             <div className='container '>
                 <div className='row my-0 my-sm-5 d-flex align-items-center '>
-                    <div className='col col-12 col-md-4 text-center text-md-start core-contact'>
+                    <div data-aos='fade-up' className='col col-12 col-md-4 text-center text-md-start core-contact'>
                         <div className='love color fs-5 '>Our Core Values</div>
                         <div className='fs-1 roboto lh-sm color fw-semibold'>Robotics learning is fun, and widens your imagination</div>
                     </div>

@@ -51,7 +51,7 @@ const AboutTech = () => {
             <div className="about-bg mt-5">
                 <div className="about-overlay"></div>
                 <div className="container py-5">
-                    <div className="row  align-items-center flex-column-reverse flex-lg-row gy-4">
+                    <div className="row  align-items-center justify-content-center flex-column-reverse flex-lg-row gy-4">
 
                         {/* IMAGES LEFT */}
                         <div className=" col-12 col-md-6  image-stack position-relative">

@@ -9,10 +9,10 @@ const EventRegistration = () => {
                 <div className="abo-overlay"></div>
                 <div className="container">
                     <div className="row align-items-center justify-content-center">
-                        <div className="col-12 col-md-6 title text-center text-md-start fw-bold bubblegum color mt-5 mt-md-0">
+                        <div data-aos='slide-right' className="col-12 col-md-6 title text-center text-md-start fw-bold bubblegum color mt-5 mt-md-0">
                             Event Registration
                         </div>
-                        <div className="col-12 col-md-6 d-flex justify-content-center">
+                        <div data-aos='zoom-out' className="col-12 col-md-6 d-flex justify-content-center">
                             <img
 
                                 src={img1}
@@ -28,7 +28,7 @@ const EventRegistration = () => {
                 <div className="container py-5 position-relative">
                     <div className="row align-items-center flex-column-reverse flex-md-row gy-4">
                         {/* Left Form */}
-                        <div className="col-md-6">
+                        <div data-aos='slide-up' className="col-md-6">
                             <div className="contact-form p-4 shadow-lg rounded-4">
                                 <h4 className="mb-4 fw-bold love">Enroll Now</h4>
 
@@ -71,7 +71,7 @@ const EventRegistration = () => {
                         </div>
 
                         {/* Right Content */}
-                        <div className="col-md-6 text-white pe-5">
+                        <div data-aos='slide-right' className="col-md-6 text-white pe-5">
                             {/* <h5 className="text-warning fw-bold love">Enroll Now</h5> */}
                             <h1 className="display-4 bubblegum mt-3 fw-bold">
                                 Gorakhpur Mahotsav<br />2025 Event

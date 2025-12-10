@@ -30,10 +30,10 @@ const MainFaq = () => {
                 <div className="abo-overlay"></div>
                 <div className="container">
                     <div className="row align-items-center justify-content-center">
-                        <div className="col-12 col-md-6 title text-center text-md-start fw-bold bubblegum color mt-5 mt-md-0">
+                        <div data-aos='slide-right' className="col-12 col-md-6 title text-center text-md-start fw-bold bubblegum color mt-5 mt-md-0">
                             Frequently Asked
                         </div>
-                        <div className="col-12 col-md-6 d-flex justify-content-center">
+                        <div data-aos='zoom-out' className="col-12 col-md-6 d-flex justify-content-center">
                             <img
 
                                 src={img1}

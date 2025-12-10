@@ -8,7 +8,7 @@ const HomeContact = () => {
       <div className="container py-5 position-relative">
         <div className="row align-items-center flex-column-reverse flex-md-row gy-4">
           {/* Left Form */}
-          <div className="col-md-6">
+          <div data-aos='fade-up' className="col-md-6">
             <div className="contact-form p-4 shadow-lg rounded-4">
               <h4 className="mb-4 fw-bold love">Enroll Now</h4>
 
@@ -54,7 +54,7 @@ const HomeContact = () => {
           </div>
 
           {/* Right Content */}
-          <div className="col-md-6 text-white pe-5">
+          <div data-aos='slide-left' className="col-md-6 text-white pe-5">
             <h5 className="text-warning fw-bold love">Enroll Now</h5>
             <h1 className="display-4 bubblegum mt-3 fw-bold">
               Join Our Fun Class <br /> with other Classmate

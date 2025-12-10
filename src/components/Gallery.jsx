@@ -38,10 +38,10 @@ const Gallery = () => {
                 <div className="abo-overlay"></div>
                 <div className="container">
                     <div className="row align-items-center justify-content-center">
-                        <div className="col-12 col-md-6 title text-center text-md-start fw-bold bubblegum color mt-5 mt-md-0">
+                        <div data-aos='slide-right' className="col-12 col-md-6 title text-center text-md-start fw-bold bubblegum color mt-5 mt-md-0">
                             Photo Gallery
                         </div>
-                        <div className="col-12 col-md-6 d-flex justify-content-center">
+                        <div data-aos='zoom-in' className="col-12 col-md-6 d-flex justify-content-center">
                             <img
 
                                 src={img}
@@ -59,7 +59,7 @@ const Gallery = () => {
                 <div className="row justify-content-center g-4 mt-3">
 
                     {images.map((item, index) => (
-                        <div key={index} className="col-6  col-lg-4  d-flex justify-content-center">
+                        <div data-aos='zoom-in' key={index} className="col-6  col-lg-4  d-flex justify-content-center">
                             <div className="main-gallery-card">
                                 <img src={item.img} alt={item.title} className="main-gallery-img" />
                                 <div className="main-gallery-overlay">

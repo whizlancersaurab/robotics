@@ -1,56 +1,118 @@
 import React from "react";
-import Carousel from "react-bootstrap/Carousel";
+import { motion } from "framer-motion";
+import {
+  Autoplay,
+  EffectCoverflow,
+  Pagination
+} from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/effect-coverflow";
+
 import bg from "/testimonial.png";
 import img1 from "../assets/Images/joinusbg.png";
 
 const Testimonial = () => {
-    return (
-        <section className="testi-wrapper" style={{ backgroundImage: `url(${bg})` }}>
-            <div className="test-overlay"></div>
+  const testimonials = [
+    {
+      message:
+        "The 'Explorer' module boosted my child’s confidence. They are more curious & excited to learn now!",
+      author: "– Manoj, Parent",
+      star:'⭐⭐⭐⭐⭐'
+    },
+    {
+      message:
+        "Amazing hands-on classes — my kid loves every session!",
+      author: "– Priya, Parent",
+      star:'⭐⭐⭐'
+    },
+    {
+      message:
+        "BOTIXBO has changed my child's learning approach completely!",
+      author: "– Rahul, Parent",
+      star:'⭐⭐⭐⭐'
+    },
+  ];
 
-            <div className="container testi-content">
-                <div className="testi-left">
-                    <p className="testi-small color love fs-4">Testimonials</p>
+  return (
+    <section
+      className="clean-testi-wrapper"
+      style={{ backgroundImage: `url(${bg})` }}
+    >
+      <div className="clean-overlay"></div>
 
-                    <h2 className="testi-title bubblegum color">
-                        Parent Say About <br /> <sapn >BOTIXBO</sapn>
-                    </h2>
+      <div className="container position-relative z-2 py-5">
+        <div className="row align-items-center">
 
-                    <div className="testi-line"></div>
+          {/* LEFT TEXT */}
+          <div className="col-lg-4">
+            <p className="c-sub love">TESTIMONIALS</p>
 
+            <h2 className="c-title bubblegum">
+              What Parents <span>Say About BOTIXBO</span>
+            </h2>
 
-                    <Carousel fade interval={2000} indicators={false}>
-                        <Carousel.Item>
-                            <div className="testi-card glass">
-                                <p className="quote">
-                                    The 'Explorer' module was a game-changer for my child. They've
-                                    gained so much confidence and are always excited to share what
-                                    they've learned. Highly recommend it!
-                                </p>
-                                <h6 className="author">– Manoj, Parent</h6>
-                            </div>
-                        </Carousel.Item>
+            <div className="c-line"></div>
 
-                        <Carousel.Item>
-                            <div className="testi-card glass">
-                                <p className="quote">
-                                    Amazing hands-on learning experience. Loved how interactive the
-                                    classes are!
-                                </p>
-                                <h6 className="author">– Priya, Parent</h6>
-                            </div>
-                        </Carousel.Item>
-                    </Carousel>
+            <SkiperTestimonialCarousel testimonials={testimonials} />
+          </div>
 
+          {/* RIGHT IMAGE */}
+          <div className="col-lg-8 text-center">
+            <motion.img
+              src={img1}
+              className="c-image"
+              alt=""
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.1 }}
+            />
+          </div>
 
-                </div>
-
-                <div className="testi-right">
-                    <img src={img1} className="testi-img float" alt="kids" />
-                </div>
-            </div>
-        </section>
-    );
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Testimonial;
+
+
+const SkiperTestimonialCarousel = ({ testimonials }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 25 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <Swiper
+        effect="coverflow"
+        slidesPerView={1}
+        centeredSlides
+        loop
+        autoplay={{ delay: 2500 }}
+        pagination={{ clickable: true }}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 220,
+          modifier: 2.5,
+        }}
+        modules={[Autoplay, EffectCoverflow, Pagination]}
+        className="u-swiper"
+      >
+        {testimonials.map((item, i) => (
+          <SwiperSlide key={i}>
+            <div className="c-card ">
+              <p className="c-quote">“{item.message}”</p>
+              <p className="c-author">{item.author}</p>
+              <div>{item.star}</div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </motion.div>
+  );
+};

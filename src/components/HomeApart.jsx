@@ -32,7 +32,7 @@ const HomeApart = () => {
         <div className="row d-flex align-items-center justify-content-center">
 
           {/* LEFT CONTENT */}
-          <div className="col-md-6 mb-4 mb-md-0 fade-in-left 
+          <div data-aos='slide-right' className="col-md-6 mb-4 mb-md-0  
             text-center text-md-start 
             d-flex flex-column align-items-center align-items-md-start">
 
@@ -64,7 +64,7 @@ const HomeApart = () => {
 
 
           {/* RIGHT IMAGE */}
-          <div className="col-md-6 text-center fade-in-right">
+          <div data-aos='slide-up' className="col-md-6 text-center">
             <img src={img1} alt="Learning innovation" className="img-fluid apart-image" />
           </div>
         </div>

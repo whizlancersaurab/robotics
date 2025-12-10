@@ -48,6 +48,7 @@ const Hero = () => {
 
             {/* TEXT SECTION */}
             <div
+               data-aos='fade-down'
                 className="container h-100 d-flex flex-column justify-content-center"
                 style={{ position: "relative", zIndex: 2, color: "white" }}
             >
@@ -82,6 +83,7 @@ const Hero = () => {
 
             {/* BOTTOM CARDS */}
             <div
+                data-aos='fade-up'
                 className="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-1"
                 style={{
                     position: "relative",

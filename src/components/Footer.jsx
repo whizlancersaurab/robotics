@@ -109,10 +109,10 @@ const Footer = () => {
           <div className="col-sm-4 col-lg-3">
             <h5 className="footer-title">Useful Links</h5>
             <ul className="footer-links list-unstyled">
-              <li><Link to={'/'}><a >Home</a></Link></li>
-              <li><Link to={'/about'}><a >About Us</a></Link></li>
-              <li><Link to={'/faq'}><a >FAQ</a></Link></li>
-              <li><Link to={'/pricing'}><a >Pricing Plan</a></Link></li>
+              <li><Link to={'/'}>Home</Link></li>
+              <li><Link to={'/about'}>About Us</Link></li>
+              <li><Link to={'/faq'}>FAQ</Link></li>
+              <li><Link to={'/pricing'}>Pricing Plan</Link></li>
 
             </ul>
           </div>
