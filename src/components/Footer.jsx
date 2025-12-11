@@ -50,9 +50,11 @@ const Footer = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if(loading) return
     setLoading(true)
     if (!validateForm()) {
       toast.error("Please fix form errors!");
+      setLoading(false)
       return;
     }
 
@@ -136,7 +138,7 @@ const Footer = () => {
                 value={userData.name}
                 autoComplete="off"
               />
-              {errors.name && <small className="text-danger ms-2">{errors.name}</small>}
+              {errors.name && <small style={{fontSize:'11px'}} className="text-danger ms-2">{errors.name}</small>}
 
               <input
                 type="email"
@@ -147,7 +149,7 @@ const Footer = () => {
                 value={userData.email}
                 autoComplete="off"
               />
-              {errors.email && <small className="text-danger ms-2">{errors.email}</small>}
+              {errors.email && <small style={{fontSize:'11px'}} className="text-danger ms-2">{errors.email}</small>}
 
               <div className="text-center text-lg-start mt-2">
                 <button className="btn submit-btn btn-primary rounded-pill w-50">

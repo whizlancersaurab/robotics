@@ -312,6 +312,11 @@ img {
   z-index: 2;
 }
 
+.core-bg .container {
+  position: relative;
+  z-index: 2;
+}
+
 
 .core-box {
   height: 280px;

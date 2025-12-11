@@ -47,7 +47,7 @@ const Testimonial = () => {
         <div className="row align-items-center">
 
           {/* LEFT TEXT */}
-          <div className="col-lg-4">
+          <div data-aos='slide-right' className="col-lg-4">
             <p className="c-sub love">TESTIMONIALS</p>
 
             <h2 className="c-title bubblegum">
@@ -60,14 +60,12 @@ const Testimonial = () => {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="col-lg-8 text-center">
-            <motion.img
+          <div data-aos='slide-up' className="col-lg-8 text-center">
+            <img
               src={img1}
               className="c-image"
               alt=""
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.1 }}
+             
             />
           </div>
 

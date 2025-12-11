@@ -68,7 +68,10 @@ const Contatact = () => {
         e.preventDefault();
         if (loading) return;
         setLoading(true);
-        if (!validateFields()) return;
+        if (!validateFields()) {
+            setLoading(false)
+            return
+        };
 
 
         try {

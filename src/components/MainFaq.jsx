@@ -2,6 +2,7 @@ import React from 'react'
 import Faq from './Faq'
 import img1 from '../assets/Images/about.png'
 import bgimg from '../assets/Images/mainfaqbg.jpg'
+import { Link } from 'react-router-dom'
 
 const MainFaq = () => {
     const posts = [
@@ -47,25 +48,25 @@ const MainFaq = () => {
             <Faq />
             <div style={{ backgroundImage: `url(${bgimg})` }} className="bg-section ">
                 <div className='join-overlay'></div>
-                <div className='text-center container'>
+                <div data-aos='zoom-in-down' className='text-center container'>
                     <div className='love text-warning fs-5 '>Join Us Now</div>
                     <div className='display-3 bubblegum fw-bold '>Don’t Let Your Child’s <br /> Childhood Pass,<br /> Join Our Robotics Class Now!.</div>
                     <div className='mt-5 d-flex align-items-center justify-content-center gap-2'>
-                        <button className="btn btn-primary ">Enroll Now</button>
-                        <button className="btn btn-success ">Contact Us</button>
+                        <Link to={'/registration'} ><button className="btn btn-primary ">Enroll Now</button></Link>
+                        <Link to={'/contact'} ><button className="btn btn-success ">Contact Us</button></Link>
                     </div>
                 </div>
             </div>
             <div
                 className="py-5"
-                // style={{
-                //     backgroundImage: "url('https://tynx.in/wp-content/uploads/2024/04/BG2-pattern.png')", 
-                
-                //     backgroundRepeat: "repeat",
-                //     backgroundPosition:'center center'
-                // }}
+            // style={{
+            //     backgroundImage: "url('https://tynx.in/wp-content/uploads/2024/04/BG2-pattern.png')", 
+
+            //     backgroundRepeat: "repeat",
+            //     backgroundPosition:'center center'
+            // }}
             >
-                
+
                 <div className="container">
 
                     {/* Top small heading */}
@@ -83,7 +84,7 @@ const MainFaq = () => {
                         {posts.map((post, index) => (
                             <div className="col-12 col-md-6 col-lg-4" key={index}>
                                 <div
-                                     className="news-card h-100 d-flex shadow flex-column justify-content-between"
+                                    className="news-card h-100 d-flex shadow flex-column justify-content-between"
                                     style={{
                                         borderRadius: "25px",
                                     }}
@@ -110,7 +111,7 @@ const MainFaq = () => {
                     <div className="text-center mt-4">
                         <button
                             className="btn text-white btn-primary fw-semibold px-5 py-2 rounded-pill"
-                            
+
                         >
                             All Blog
                         </button>

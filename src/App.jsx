@@ -50,7 +50,7 @@ const App = () => {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme="light"   // or "dark" 
+        theme="light"
       />
     </BrowserRouter>
 

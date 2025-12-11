@@ -13,3 +13,5 @@ export const api = axios.create({
 
 export const SubscribeCompany = (data) => api.post("/subscribe", data);
 export const ContactUs = (data) => api.post("/contactus", data);
+export const EnrollMent = (data)=>api.post("/enroll" , data)
+export const Registration = (data)=>api.post("/eventreg" , data)
